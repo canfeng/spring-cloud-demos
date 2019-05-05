@@ -1,16 +1,47 @@
-plugins {
-    id 'java'
-}
-
 group 'com.szg'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'java'
+
 sourceCompatibility = 1.8
+
+buildscript {
+    ext {
+        //定义一个变量，统一规定springboot的版本
+        springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        //用来打包
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+ext {
+    springCloudVersion = 'Edgware.SR2'
+}
 
 repositories {
     mavenCentral()
 }
 
+dependencyManagement {
+    imports {
+        //加上此配置后，如果需要引用springcloud的组件，就不需要再提供版本信息
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    //注册中心服务端的组件
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
 }
+
+
