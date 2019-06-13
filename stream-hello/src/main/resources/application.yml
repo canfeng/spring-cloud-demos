@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: stream-hello
+  rabbitmq:
+    host: 172.16.50.131
+    port: 5672
+    username: szg
+    password: 123456
+    virtual-host: /szg
+  cloud:
+    stream:
+      instanceCount: 2
+      instanceIndex: 0
+      bindings:
+        input:
+          # exchange name
+          destination: topic_1
+          # queue suffix
+          group: group-1
+server:
+  port: 2201
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/

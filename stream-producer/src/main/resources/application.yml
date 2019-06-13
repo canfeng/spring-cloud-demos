@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: stream-producer
+  rabbitmq:
+    host: 172.16.50.131
+    port: 5672
+    username: szg
+    password: 123456
+    virtual-host: /szg
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: topic_1
+          producer:
+            partitionKeyExpression: payload
+            partitionCount: 2
+server:
+  port: 2301
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
