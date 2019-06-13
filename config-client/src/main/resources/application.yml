@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:canfeng/spring-cloud-demos.git
+server:
+  port: 3001
