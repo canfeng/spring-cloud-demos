@@ -1,7 +1,12 @@
 spring:
   application:
     name: user-service
-server:
+  cloud:
+    config:
+      uri: http://localhost:3001/
+      profile: default
+      label: master
+  server:
   port: 2101
 eureka:
   client:

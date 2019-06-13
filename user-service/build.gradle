@@ -22,7 +22,7 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "Edgware.SR1")
+    set('springCloudVersion', "Edgware.SR5")
 }
 
 dependencies {
@@ -31,6 +31,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-eureka'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
 }
 
 dependencyManagement {

@@ -1,4 +1,4 @@
-package com.szg.configclient;
+package com.szg.configserver;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -6,10 +6,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @EnableConfigServer
 @SpringBootApplication
-public class ConfigClientApplication {
+public class ConfigServerApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ConfigClientApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(ConfigServerApplication.class).web(true).run(args);
     }
 }
 

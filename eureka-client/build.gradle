@@ -22,7 +22,7 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "Edgware.SR1")
+    set('springCloudVersion', "Edgware.SR5")
 }
 
 dependencies {
