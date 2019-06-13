@@ -1,3 +1,5 @@
+import jdk.internal.dynalink.linker.LinkerServices
+
 plugins {
     id 'org.springframework.boot' version '1.5.10.RELEASE'
     id 'java'
@@ -29,6 +31,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-eureka'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'

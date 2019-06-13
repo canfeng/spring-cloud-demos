@@ -1,0 +1,10 @@
+# 加密
+encrypt:
+  # 对称加密
+#  key: ibeesaas
+  # 非对称加密
+  key-store:
+    location: config-server.keystore
+    alias: config-server
+    password: ibeesaas
+    secret: ibeesaas

@@ -1,14 +1,13 @@
 spring:
   application:
     name: user-service
-  cloud:
-    config:
-      uri: http://localhost:3001/
-      profile: default
-      label: master
-  server:
+server:
   port: 2101
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1001/eureka/
+info:
+  profile: dev
+  author: szg
+  city: beijing

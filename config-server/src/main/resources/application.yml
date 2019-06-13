@@ -5,7 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:canfeng/config-repo.git
+          uri: git@github.com:canfeng/spring-cloud-demos.git
+          searchPaths: config-repo
 server:
   port: 3001
 
@@ -13,4 +14,6 @@ security:
   user:
     name: config-admin
     password: config-admin
+
+
 
