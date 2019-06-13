@@ -7,8 +7,16 @@ spring:
         git:
           uri: git@github.com:canfeng/spring-cloud-demos.git
           searchPaths: config-repo
+        encrypt:
+          enabled: false
+
 server:
   port: 3001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
 
 security:
   user:
