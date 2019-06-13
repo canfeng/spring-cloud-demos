@@ -5,7 +5,13 @@ spring:
 server:
   port: 2101
 
+# actuator no login
+management:
+  security:
+    enabled: false
+
 info:
   profile: dev
   author: szg
   city: beijing
+

@@ -3,7 +3,7 @@ spring:
     config:
       server:
         encrypt:
-          enabled: false
+          enabled: true
 
 eureka:
   client:

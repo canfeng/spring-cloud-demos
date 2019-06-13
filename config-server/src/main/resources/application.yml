@@ -16,6 +16,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1001/eureka/
 
+# actuator no login
+management:
+  security:
+    enabled: false
+
 security:
   user:
     name: config-admin
